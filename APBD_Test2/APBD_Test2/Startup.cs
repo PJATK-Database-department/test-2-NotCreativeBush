@@ -28,9 +28,9 @@ namespace APBD_Test2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<InspectionDbContext>(options =>
+            services.AddDbContext<InspectionDbContext>(opt =>
             {
-                options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]);
+                opt.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]);
             });
 
             services.AddTransient<IDbService, InspectionDbService>();

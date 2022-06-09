@@ -57,7 +57,9 @@ namespace APBD_Test2.Contexts
                 opt.Property(o => o.FirstName).HasMaxLength(20).IsRequired();
                 opt.Property(o => o.LastName).HasMaxLength(30).IsRequired();
             });
-            modelBuilder.Entity<ServiceTypeDict>();
+            modelBuilder.Entity<ServiceTypeDict>(opt=> { 
+                opt.HasKey
+            });
             modelBuilder.Entity<ServiceTypeDictInspection>();
         }
 
