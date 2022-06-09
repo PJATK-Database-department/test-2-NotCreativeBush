@@ -1,0 +1,7 @@
+C:\Users\s19120\Documents\apbd_test2\test-2-NotCreativeBush\APBD_Test2\APBD_Test2\obj\Debug\net5.0\APBD_Test2.csproj.AssemblyReference.cache
+C:\Users\s19120\Documents\apbd_test2\test-2-NotCreativeBush\APBD_Test2\APBD_Test2\obj\Debug\net5.0\APBD_Test2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\s19120\Documents\apbd_test2\test-2-NotCreativeBush\APBD_Test2\APBD_Test2\obj\Debug\net5.0\APBD_Test2.AssemblyInfoInputs.cache
+C:\Users\s19120\Documents\apbd_test2\test-2-NotCreativeBush\APBD_Test2\APBD_Test2\obj\Debug\net5.0\APBD_Test2.AssemblyInfo.cs
+C:\Users\s19120\Documents\apbd_test2\test-2-NotCreativeBush\APBD_Test2\APBD_Test2\obj\Debug\net5.0\APBD_Test2.csproj.CoreCompileInputs.cache
+C:\Users\s19120\Documents\apbd_test2\test-2-NotCreativeBush\APBD_Test2\APBD_Test2\obj\Debug\net5.0\APBD_Test2.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\s19120\Documents\apbd_test2\test-2-NotCreativeBush\APBD_Test2\APBD_Test2\obj\Debug\net5.0\APBD_Test2.MvcApplicationPartsAssemblyInfo.cache

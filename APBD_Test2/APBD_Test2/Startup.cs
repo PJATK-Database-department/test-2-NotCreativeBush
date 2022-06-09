@@ -28,18 +28,20 @@ namespace APBD_Test2
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IDbService, InspectionDbService>();
-
             services.AddDbContext<InspectionDbContext>(options =>
             {
                 options.UseSqlServer(Configuration["ConnectionStrings:DefaultConnection"]);
             });
+
+            services.AddTransient<IDbService, InspectionDbService>();
+
+            
         
             services.AddControllers();
-            services.AddSwaggerGen(c =>
+            /*services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "APBD_Test2", Version = "v1" });
-            });
+            });*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

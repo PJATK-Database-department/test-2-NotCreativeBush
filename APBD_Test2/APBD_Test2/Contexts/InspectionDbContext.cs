@@ -30,16 +30,35 @@ namespace APBD_Test2.Contexts
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Inspection>(opt =>
             {
-                opt.HasKey(opt=>opt.IdInspection);
-                opt.HasOne(opt => opt.idCar);
-
-                opt.HasKey(opt => opt.InspectionDate);
+                opt.HasKey(opt => opt.IdInspection);
+                opt.HasOne(opt => opt.Car)
+                .WithMany(opt=> opt.Inspections)
+                .HasForeignKey(opt=> opt.IdCar);
+                opt.HasOne(opt => opt.Mechanic)
+                .WithMany(opt => opt.Inspections)
+                .HasForeignKey(opt => opt.IdMechanic);
+                opt.Property(opt => opt.InspectionDate).IsRequired();
                 opt.Property(opt => opt.Comment).HasMaxLength(300);
 
 
 
 
-            })
+            });
+            modelBuilder.Entity<Car>(opt=>
+            {
+                opt.HasKey(o => o.IdCar);
+                opt.Property(o => o.Name).HasMaxLength(50).IsRequired();
+                opt.Property(o => o.ProductionYear).IsRequired();
+
+            });
+            modelBuilder.Entity<Mechanic>(opt=>
+            {
+                opt.HasKey(o => o.IdMechanic);
+                opt.Property(o => o.FirstName).HasMaxLength(20).IsRequired();
+                opt.Property(o => o.LastName).HasMaxLength(30).IsRequired();
+            });
+            modelBuilder.Entity<ServiceTypeDict>();
+            modelBuilder.Entity<ServiceTypeDictInspection>();
         }
 
     }

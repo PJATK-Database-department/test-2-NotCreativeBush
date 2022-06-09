@@ -9,7 +9,7 @@ namespace APBD_Test2.Services
 {
     public interface IDbService
     {
-        public List<InspectionResponse> GetInspectionList(int id);
+        public InspectionResponse GetInspectionList(int id);
         public bool ChangeCarToInspection(ChangeCarToInspectionRequest request);
     }
 }

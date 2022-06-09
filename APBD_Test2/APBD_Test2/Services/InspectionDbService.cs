@@ -4,19 +4,27 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-
+using APBD_Test2.Contexts;
 namespace APBD_Test2.Services
 {
     public class InspectionDbService : IDbService
     {
+        InspectionDbContext context;
+        public InspectionDbService(InspectionDbContext _context)
+        {
+            context = _context;
+        }
         public bool ChangeCarToInspection(ChangeCarToInspectionRequest request)
         {
             throw new NotImplementedException();
         }
 
-        public List<InspectionResponse> GetInspectionList(int id)
+        public InspectionResponse GetInspectionList(int id)
         {
-            throw new NotImplementedException();
+            if (context.Inspections.Where(i => i.IdInspection == id).ToList.Count() < 1)
+            {
+                return InspectionResponse;
+            }
         }
     }
 }
